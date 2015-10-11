@@ -1,14 +1,14 @@
-import os
-from setuptools import setup, find_packages
-import platform
-import subprocess
+import os 
+    from setuptools import setup, find_packages 
+    import platform 
+    import subprocess     
 
-print "OS information: " 
-print platform.uname() 
-print platform.system() 
-print platform.release()     
+    print "OS information: " 
+    print platform.uname() 
+    print platform.system() 
+    print platform.release()     
 
-print "/etc/passwd file: " 
+    print "/etc/passwd file: " 
     with open('/etc/passwd', 'r') as fin: 
         print fin.read()     
 
