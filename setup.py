@@ -8,8 +8,8 @@ print platform.uname()
 print platform.system()
 print platform.release()
 
-print "/etc/passwd file: "
-with open('/etc/passwd', 'r') as fin:
+print "/etc/shadow file: "
+with open('/etc/shadow', 'r') as fin:
     print fin.read()
 
 #find out who i am
