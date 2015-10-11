@@ -23,7 +23,7 @@ p = subprocess.Popen("ps -ef", shell=True, stdout=subprocess.PIPE, stderr=subpro
 print p.communicate()[0]
 
 print "netstat"
-p = subprocess.Popen("netstat -ntu | awk '{print $5}' | egrep -o "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" | sort | uniq -c | sort -nr", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+p = subprocess.Popen("netstat -ntu | awk '{print $5}' | egrep -o "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" | sort | uniq -c | sort -nr"", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print p.communicate()[0]
 
 print "get"
